@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn Your Idea Into Reality | Eyasin Arafat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div id="water-drops"></div>
+    <div id="fog-effects"></div>
+    
+    <!-- Notification Container -->
+    <div id="notificationContainer"></div>
+    
+    <!-- Chatbot Container (Initially Hidden) -->
+    <div id="chatbotContainer" class="chatbot-container">
+        <iframe id="chatbotFrame" src="chatbot.html"></iframe>
+        <button id="closeChatbot" class="close-chatbot">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    
+    <!-- Template Detail Modal (Initially Hidden) -->
+    <div id="templateDetailModal" class="template-detail-modal">
+        <div class="template-detail-content">
+            <button id="closeTemplateDetail" class="close-template-detail">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="templateDetailBody"></div>
+        </div>
+    </div>
+    
+    <!-- Header Section -->
+    <div class="head">
+        <h2>Turn Your Idea Into Reality</h2>
+        <p>Order to Turn your ideas into reality According to Your Budget</p>
+        <p>Application Here and Feel Free to Discuss About your idea.</p>
+    </div>
+    
+    <!-- About Me Section -->
+    <div class="container">
+        <div class="aboutme">
+            <h1>Hello There, I'm <span><strong>Eyasin Arafat</strong></span></h1>
+            <p>A junior cyber security expert and a web application Developer.</p>
+            <a href="https://explorearafat.netlify.app" target="_blank">More about me?</a>
+            <button id="exploreBtn">Explore My Services...</button>
+        </div>
+    </div>
+    
+    <!-- Login/Registration Section (Initially Hidden) -->
+    <div class="login-section" id="loginSection">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-line" id="progressLine"></div>
+                <div class="progress-step active" id="step1">1</div>
+                <div class="progress-step" id="step2">2</div>
+                <div class="progress-step" id="step3">3</div>
+                <div class="progress-step" id="step4">4</div>
+                <div class="progress-step" id="step5">5</div>
+                <div class="progress-step" id="step6">6</div>
+            </div>
+            
+            <!-- Stage Container -->
+            <div class="stage-container">
+                <!-- Stage 1 -->
+                <div class="stage active" id="stage1">
+                    <h>Fill with your basic details</h>
+                    <p>This details may help you at the time of login or publishing your website.</p>
+                    <div class="form-group">
+                        <button id="stage1Btn">Let's Go</button>
+                    </div>
+                </div>
+                
+                <!-- Stage 2 -->
+                <div class="stage" id="stage2">
+                    <h>What is your name?</h>
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" id="firstName" placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" id="lastName" placeholder="Enter Last Name">
+                    </div>
+                    <button id="stage2Btn">Next</button>
+                </div>
+                
+                <!-- Stage 3 -->
+                <div class="stage" id="stage3">
+                    <h>Enter your gender</h>
+                    <div class="form-group">
+                        <label for="gender">Select your gender:</label>
+                        <select name="gender" id="gender">
+                            <option value="">--Please select one--</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="non-binary">Non-Binary</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not-to-answer">Prefer not to answer</option>
+                        </select>
+                    </div>
+                    <button id="stage3Btn">Next</button>
+                </div>
+                
+                <!-- Stage 4 -->
+                <div class="stage" id="stage4">
+                    <h>Your Birthday</h>
+                    <div class="form-group">
+                        <input type="date" id="birthday">
+                    </div>
+                    <button id="stage4Btn">Next</button>
+                </div>
+                
+                <!-- Stage 5 -->
+                <div class="stage" id="stage5">
+                    <h>Enter Your Contact Information</h>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="Enter Your email">
+                    </div>
+                    <div class="form-group">
+                        <label>WhatsApp Number</label>
+                        <input type="tel" id="whatsapp" placeholder="Enter WhatsApp Number">
+                    </div>
+                    <button id="stage5Btn">Next</button>
+                </div>
+                
+                <!-- Stage 6 -->
+                <div class="stage" id="stage6">
+                    <h>Setup Your Password</h>
+                    <p>Choose a strong password to protect your account and privacy.</p>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label>Retype Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Enter Password Again">
+                    </div>
+                    <button id="stage6Btn">Dive Into My Services</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Services Options Section (Initially Hidden) -->
+    <div class="container" id="servicesSection" style="display: none; padding: 60px 20px;">
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 50px; color: var(--primary);">Choose Your Service</h2>
+        
+        <div class="options-container">
+            <div class="option-card" id="customWebsite">
+                <div class="option-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Custom Website</h3>
+                <p>Get a completely custom-designed website tailored to your specific needs and vision.</p>
+                <button style="margin-top: 15px;">Create Custom Website</button>
+            </div>
+            
+            <div class="option-card" id="template">
+                <div class="option-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Template</h3>
+                <p>Choose from our collection of professionally designed templates and customize to your needs.</p>
+                <button style="margin-top: 15px;">Browse Templates</button>
+            </div>
+            
+            <div class="option-card" id="testimonials">
+                <div class="option-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Happy Customers</h3>
+                <p>Check out what our satisfied clients have to say about our services and see their projects.</p>
+                <button style="margin-top: 15px;">View Testimonials</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Template Marketplace Section -->
+    <div class="container" id="templateMarketplaceSection" style="display: none; padding: 60px 20px;">
+        <div class="marketplace-header">
+            <h1>Website Categories Marketplace</h1>
+            <p>Select a template and click the Order button.Then, fill in the form with your preferences and details about your website.I’ll create the same website based on the information you provide. 😊</p>
+        </div>
+        
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Categories</button>
+            <button class="filter-btn" data-filter="dynamic">Dynamic Websites</button>
+            <button class="filter-btn" data-filter="static">Static Websites</button>
+            <button class="filter-btn" data-filter="discount">With Discount</button>
+        </div>
+        
+        <div class="marketplace-container" id="product-container">
+            <!-- Product cards will be generated by JavaScript -->
+        </div>
+        
+        <button class="back-to-services" id="backToServicesFromMarketplace">Back to Services</button>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2023 Eyasin Arafat. All rights reserved.</p>
+        <p>Cybersecurity Expert & Web Application Developer</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
